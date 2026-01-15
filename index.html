@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Portfolio — Jane Doe</title>
+  <meta name="description" content="Personal portfolio of Jane Doe — web developer." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Jane Doe</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Hi — I'm <strong>Jane Doe</strong>, a front-end developer who loves building accessible and responsive web experiences. I specialize in HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.S. in Computer Science</strong>, City University — 2022</li>
+        <li><strong>Web Design Certificate</strong>, Online Academy — 2023</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+      <div class="timeline" aria-label="Work experience timeline">
+        <div class="timeline-item">
+          <h3>Front-end Developer — Acme Co.</h3>
+          <time datetime="2023-06">Jun 2023 — Present</time>
+          <p>Worked on building responsive components and improving site performance.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Intern — StartUp Labs</h3>
+          <time datetime="2022-01">Jan 2022 — May 2023</time>
+          <p>Assisted with UI implementation and automated tests for UI components.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="skills-list" aria-hidden="false">
+        <li>HTML <span class="meter"><span style="width:95%"></span></span></li>
+        <li>CSS <span class="meter"><span style="width:90%"></span></span></li>
+        <li>JavaScript <span class="meter"><span style="width:85%"></span></span></li>
+        <li>Accessibility <span class="meter"><span style="width:80%"></span></span></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <div class="form-actions">
+          <button type="submit">Send message</button>
+          <button type="reset" class="muted">Reset</button>
+        </div>
+        <p id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jane Doe — Built with ❤️</p>
+      <p class="small">Host on GitHub Pages: <code>username.github.io/repo</code></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+/* style.css — simple, clean, responsive portfolio */
+
+/* CSS variables for easy theming */
+:root{
+  --bg:#ffffff;
+  --fg:#111827;
+  --muted:#6b7280;
+  --accent:#0ea5a4;
+  --card:#f9fafb;
+  --radius:12px;
+  --max-width:1000px;
+  --gap:1.125rem;
+  --shadow: 0 6px 18px rgba(17,24,39,0.06);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono";
+  font-size: 16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding-bottom:4rem;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem;}
+
+/* header */
+.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.6));backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid rgba(0,0,0,0.04);z-index:30}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+.logo{margin:0;font-size:1.25rem}
+.nav a{margin-right:.75rem;text-decoration:none;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:.5rem}
+.nav button{background:none;border:0;font-size:1.1rem;cursor:pointer}
+
+/* cards & sections */
+.card{background:var(--card);padding:1.25rem;border-radius:var(--radius);box-shadow:var(--shadow);margin:1rem 0}
+.card h2{margin-top:0}
+
+/* timeline */
+.timeline{display:flex;flex-direction:column;gap:.75rem}
+.timeline-item{padding:.75rem;border-left:3px solid var(--accent);background:transparent;border-radius:8px}
+
+/* skills */
+.skills-list{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.skills-list li{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.meter{display:inline-block;background:linear-gradient(90deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));width:40%;height:10px;border-radius:999px;overflow:hidden}
+.meter span{display:block;height:100%;background:linear-gradient(90deg,var(--accent), #06b6d4);border-radius:999px;transition:width .6s ease}
+
+/* projects grid */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.project-card{padding:.75rem;border-radius:10px;border:1px solid rgba(0,0,0,0.04);background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
+
+/* form */
+form{display:flex;flex-direction:column;gap:.5rem}
+input,textarea{padding:.6rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);outline:none;font:inherit}
+input:focus,textarea:focus{box-shadow:0 0 0 3px rgba(14,165,164,0.08);border-color:var(--accent)}
+.form-actions{display:flex;gap:.5rem;align-items:center}
+button{background:var(--accent);color:#fff;padding:.5rem .75rem;border-radius:8px;border:0;cursor:pointer}
+button.muted{background:transparent;color:var(--muted);border:1px solid rgba(0,0,0,0.06)}
+
+/* footer */
+.site-footer{margin-top:2rem;padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* small */
+.small{font-size:.85rem;color:var(--muted)}
+
+/* responsiveness */
+@media (min-width:900px){
+  .site-header .container{padding:1rem 2rem}
+}
+
+/* dark theme */
+body.dark{
+  --bg:#0b1220;
+  --fg:#e6eef6;
+  --muted:#9aa7b5;
+  --card:#071026;
+  --accent:#06b6d4;
+  background:var(--bg);
+}
