@@ -1,97 +1,86 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Personal Portfolio — Jane Doe</title>
-  <meta name="description" content="Personal portfolio of Jane Doe — web developer." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dennis Jean S. Thompson | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Jane Doe</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      </nav>
+
+  <header>
+    <div class="profile">
+      <!-- Replace pfp.jpg with your own image later -->
+      <img src="pfp.jpg" alt="Profile Picture">
+      <h1>Dennis Jean S. Thompson</h1>
+      <p>BSIT – Web Technology (3rd Year)</p>
+      <p>University of the Cordilleras, Philippines</p>
+      <button id="darkToggle">🌙 Toggle Dark Mode</button>
     </div>
   </header>
 
-  <main class="container">
-    <section id="about" class="card">
+  <main>
+
+    <section>
       <h2>About Me</h2>
-      <p>Hi — I'm <strong>Jane Doe</strong>, a front-end developer who loves building accessible and responsive web experiences. I specialize in HTML, CSS, and JavaScript.</p>
+      <p>
+        Hello! My name is Dennis Jean S. Thompson, and I am currently a third-year BSIT student majoring in Web Technology at the University of the Cordilleras. I enjoy learning how websites work and how design and functionality come together.
+      </p>
+      <p>
+        I like creating clean and simple web pages while improving my skills in HTML, CSS, and JavaScript. I also enjoy experimenting with layouts and styles to make websites look better and easier to use.
+      </p>
+      <p>
+        This portfolio showcases my progress in web development and represents my learning journey in CIT18 – Mastery in Web.
+      </p>
     </section>
 
-    <section id="education" class="card">
+    <section>
       <h2>Education</h2>
-      <ul>
-        <li><strong>B.S. in Computer Science</strong>, City University — 2022</li>
-        <li><strong>Web Design Certificate</strong>, Online Academy — 2023</li>
-      </ul>
+      <p>
+        I am currently taking Bachelor of Science in Information Technology with a major in Web Technology at the University of the Cordilleras. I am in my third year of college and continuously learning new concepts related to web development.
+      </p>
+      <p>
+        Some of the topics I have studied include front-end development, basic JavaScript programming, responsive design, and introductory database concepts.
+      </p>
     </section>
 
-    <section id="experience" class="card">
-      <h2>Experience</h2>
-      <div class="timeline" aria-label="Work experience timeline">
-        <div class="timeline-item">
-          <h3>Front-end Developer — Acme Co.</h3>
-          <time datetime="2023-06">Jun 2023 — Present</time>
-          <p>Worked on building responsive components and improving site performance.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Intern — StartUp Labs</h3>
-          <time datetime="2022-01">Jan 2022 — May 2023</time>
-          <p>Assisted with UI implementation and automated tests for UI components.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="card">
+    <section>
       <h2>Skills</h2>
-      <ul class="skills-list" aria-hidden="false">
-        <li>HTML <span class="meter"><span style="width:95%"></span></span></li>
-        <li>CSS <span class="meter"><span style="width:90%"></span></span></li>
-        <li>JavaScript <span class="meter"><span style="width:85%"></span></span></li>
-        <li>Accessibility <span class="meter"><span style="width:80%"></span></span></li>
+      <ul>
+        <li>HTML – Creating structured and semantic web pages</li>
+        <li>CSS – Styling, layout, and responsive design</li>
+        <li>JavaScript – Basic interactivity and DOM manipulation</li>
+        <li>Git & GitHub – Version control basics</li>
       </ul>
     </section>
 
-    <section id="projects" class="card">
+    <section>
       <h2>Projects</h2>
-      <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+      <ul>
+        <li>Personal Portfolio Website</li>
+        <li>Simple To-Do List App using JavaScript</li>
+        <li>Responsive Landing Page</li>
+        <li>Class Exercises in Web Development</li>
+      </ul>
     </section>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <form id="contact-form" novalidate>
-        <label for="name">Name</label>
-        <input id="name" name="name" required />
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <div class="form-actions">
-          <button type="submit">Send message</button>
-          <button type="reset" class="muted">Reset</button>
-        </div>
-        <p id="form-msg" role="status" aria-live="polite"></p>
+    <section>
+      <h2>Contact Information</h2>
+      <p>If you would like to contact me, feel free to send a message below.</p>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="formMessage"></p>
       </form>
     </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Jane Doe — Built with ❤️</p>
-      <p class="small">Host on GitHub Pages: <code>username.github.io/repo</code></p>
-    </div>
+  <footer>
+    <p>© 2026 Dennis Jean S. Thompson | CIT18 – Mastery in Web</p>
   </footer>
 
   <script src="script.js"></script>
